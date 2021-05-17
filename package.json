@@ -1,0 +1,18 @@
+{
+  "name": "CSS_Grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-script-os",
+    "start:win32": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js, !node_modules/**/*' --directory --port 5000 --browser \"C:\\Program Files\\Firefox Developer Edition\\firefox.exe\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "run-script-os": "^1.1.6"
+  }
+}

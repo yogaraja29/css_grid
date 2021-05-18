@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat Function</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            /* we can use repeat() for simplified units */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(2, 1fr 2fr);
+            grid-template-columns: repeat(2, 1fr 2fr 3fr);
+            grid-template-columns: repeat(3, 2fr 1fr 2fr);
+
+            /* we can use repeat() with other values and units */
+            grid-template-columns: 100px repeat(2, 2fr 1fr) 50px;
+
+            /* we can use repeat() multiple times */
+            grid-template-columns: 100px repeat(3, 1fr) 50px repeat(2, 2fr);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+</body>
+</html>

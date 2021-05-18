@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit and Explicit Track</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container{
+            display: grid;
+            /* By default all tracks are created by implicitly */
+            /* We can create Explicit tracks */
+            gap: 20px;
+            grid-template-columns: 100px 200px 300px;
+            /* also define multiple units */
+            grid-template-columns: 25% 100px 15rem;
+            /* we can use fractional unit for occuping remaining free space */
+            grid-template-columns: 25% 100px 15rem 1fr;
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+
+            /* We can use "fr" for grid-rows, but container has fixed height */
+            grid-template-rows: 100px 1fr 200px;
+            height: 600px;
+            grid-template-rows: 100px 1fr;
+
+            /* Also, We can mention implicit auto rows size */
+            grid-auto-rows: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+</body>
+</html>

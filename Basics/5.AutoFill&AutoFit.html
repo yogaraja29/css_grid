@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFill&AutoFit</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container{
+            display: grid;
+            gap: 10px;
+            /* auto-fill creates extra tracks in remaining space */
+            grid-template-columns: repeat(auto-fill, 150px);
+            /* auto-fit doesn't create extra tracks. but it takes maximum to fit */
+            grid-template-columns: repeat(auto-fit, 150px);
+
+            /* Also we can use minmax(minValue, maxValue) with auto-fill and auto-fit */
+
+            /* auto-fill gives priority only for minimum value */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+            /* auto-fit gives priority fo maximum value to fit content */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <!-- <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div> -->
+    </div>
+</body>
+</html>

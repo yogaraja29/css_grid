@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naming Grid Lines</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      .container {
+        display: grid;
+        gap: 20px;
+        /* Specifying Grid lines Name */
+        grid-template-columns: [start sidebar-start]1fr [sidebar-end content-start]2fr [content-end end];
+        grid-template-rows: [header-start]100px [header-end main-start]auto [main-end footer-start]75px [footer-end];
+      }
+      .container > div {
+        background: coral;
+        padding: 15px;
+      }
+      .header{
+          grid-row: header-start / header-end;
+          grid-column: start / end;
+      }
+      .sidebar{
+          grid-column: sidebar-start / sidebar-end;
+          grid-row: main-start / main-end;
+      }
+      .content{
+          grid-column: content-start / content-end;
+          grid-row: main-start / main-end;
+      }
+      .footer{
+          grid-row: footer-start / footer-end;
+          grid-column: start / end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="content">Content</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

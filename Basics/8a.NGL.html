@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGL with Repeat function</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container{
+            display: grid;
+            gap: 20px;
+
+            /* Naming grid lines with repeat function */
+            grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+            grid-template-rows: repeat(4, [row-start] 1fr [row-end]);
+        }
+        .item:nth-child(1){
+            grid-area: row-start 1 / col-start 1 / row-end 1 / col-end 3;
+        }
+        .item:nth-child(2){
+            grid-area: row-start 2 / col-start 1 / row-end 3 / col-end 1;
+        }
+        .item:nth-child(3){
+            grid-area: row-start 2 / col-start 2 / row-end 3 / col-end 3;
+        }
+        .item:nth-child(4){
+            grid-area: row-start 4 / col-start 1 / row-end 4 / col-end 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Header</div>
+        <div class="item">Sidebar</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor deserunt neque suscipit a porro reiciendis unde cumque eius dicta! Possimus tempora error, vero delectus illo voluptatem doloremque quod repudiandae corrupti quasi repellendus laboriosam unde nam, assumenda enim eligendi odio molestias! Eum aspernatur labore libero. Reiciendis cumque velit ea iusto nostrum!</div>
+        <div class="item">Footer</div>
+        <!-- <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div> -->
+    </div>
+</body>
+</html>

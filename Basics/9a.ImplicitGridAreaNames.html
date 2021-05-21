@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Areas with Name</title>
+    <title>Implicit Grid Area Names</title>
     <link rel="stylesheet" href="../style.css">
     <style>
         .container{
-
             display: grid;
             gap: 20px;
 
@@ -25,16 +24,19 @@
 
         /* Accessing grid items with grid-area */
         .item:nth-child(1){
-            grid-area: header;
+            grid-area: header-start / sidebar-start / header-end / content-end;
         }
         .item:nth-child(2){
-            grid-area: sidebar;
+            grid-area: sidebar-start / sidebar-start / sidebar-end / sidebar-end;
+            /* Another way ---> */
+            /* grid-area: header-end / sidebar-start / footer-start / sidebar-end; */
         }
         .item:nth-child(3){
-            grid-area: content;
+            grid-area: content-start / content-start / content-end / content-end;
+            /* grid-area: header-end / content-start / footer-start / content-end; */
         }
         .item:nth-child(4){
-            grid-area: footer;
+            grid-area: footer-start / sidebar-start / footer-end / content-end;
         }
     </style>
 </head>
